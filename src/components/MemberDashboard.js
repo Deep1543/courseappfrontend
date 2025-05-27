@@ -107,16 +107,21 @@ const MemberDashboard = () => {
           </button>
         </div>
 
-        {/* Floating Chat Button */}
-        {!isChatOpen && (
-          <button
-            className="fixed right-6 bottom-6 bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition-all"
-            onClick={() => setIsChatOpen(true)}
-            title="Need Help?"
-          >
-            <FiMessageCircle className="text-2xl" />
-          </button>
-        )}
+       {/* Floating Chat Button */}
+{!isChatOpen && (
+  <button
+    className="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition-all"
+    onClick={() => setIsChatOpen(true)}
+    title="Need Help?"
+    style={{
+      marginLeft: '1100px',
+      marginBottom: '100px',
+    }}
+  >
+    <FiMessageCircle className="text-2xl" />
+  </button>
+)}
+
 
         {/* Chatbot Window */}
         {isChatOpen && <Chatbot onClose={() => setIsChatOpen(false)} />}
